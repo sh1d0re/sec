@@ -3,7 +3,7 @@
 
 ## EXPLANATION
 ### Definition:
-> B2E    - B2E stands for Black Box Encoder (B2 means two B`s).
+> SEC    - B2E stands for Secure Encode Chat.
 
 ## REQUIREMENTS
 ### Packages:
