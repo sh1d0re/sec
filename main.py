@@ -1,6 +1,11 @@
-print("""┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n┃  ╭────╮  ┃   ┏┓  ╺━┓ ┏━╸   ┏━╸ ╻ ╻ ┏━┓ ━┳━                      ┃\n┃  │╭───╯  ┃   ┣┻┓ ┏━┛ ┣━╸   ┃   ┣━┫ ┣━┫  ┃                       ┃\n┃  ╰╯      ┃   ┗━┛ ┗━╸ ┗━╸   ┗━╸ ╹ ╹ ╹ ╹  ╹                       ┃\n┡━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩\n│                     PROGRAMMER : Kunihito Takada                │\n│                        LICENSE : GPL-v3                         │\n│                       LANGUAGE : Python                         │\n└────────────────────────────────┴────────────────────────────────┘""")
+print("""┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n┃  ╭────╮  ┃   ┏━╸ ┏━╸ ┏━╸   ┏━╸ ╻ ╻ ┏━┓ ━┳━                      ┃\n┃  │╭───╯  ┃   ┗━┓ ┣━╸ ┃     ┃   ┣━┫ ┣━┫  ┃                       ┃\n┃  ╰╯      ┃   ╺━┛ ┗━╸ ┗━╸   ┗━╸ ╹ ╹ ╹ ╹  ╹                       ┃\n┡━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩\n│                     PROGRAMMER : Kunihito Takada                │\n│                        LICENSE : GPL-v3                         │\n│                       LANGUAGE : Python                         │\n└────────────────────────────────┴────────────────────────────────┘""")
 cluster,uri="",""
 print("━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n[ 1: LOADING    PyP ] ┃ \x1b[31mEnter \x1b[31;1mControl&C\x1b[0m\x1b[31m To Abort. Leave To Proceed.\x1b[0m")
+try:import os
+except Exception as e:
+	print("                Error ┖╴\x1b[31m"+str(e)+"\nProgram aborted. Contact developer at github repository or admin.")
+	quit()
+print("            OS Module ┠╴\x1b[32mSUCCESS\x1b[39;49m")
 try:import random
 except Exception as e:
 	print("                Error ┖╴\x1b[31m"+str(e)+"\nProgram aborted. Contact developer at github repository or admin.")
@@ -16,6 +21,11 @@ except Exception as e:
 	print("                Error ┖╴\x1b[31m"+str(e)+"\nProgram aborted. Contact developer at github repository or admin.")
 	quit()
 print("          Time Module ┠╴\x1b[32mSUCCESS\x1b[39;49m")
+try:import subprocess
+except Exception as e:
+	print("                Error ┖╴\x1b[31m"+str(e)+"\nProgram aborted. Contact developer at github repository or admin.")
+	quit()
+print("    Subprocess Module ┠╴\x1b[32mSUCCESS\x1b[39;49m")
 try:from b2e import b2e
 except Exception as e:
 	print("                Error ┖╴\x1b[31m"+str(e)+"\nProgram aborted. Contact developer at github repository or admin.")
@@ -24,7 +34,8 @@ print("           B2E Module ┠╴\x1b[32mSUCCESS\x1b[39;49m")
 try:
 	from pymongo.mongo_client import MongoClient
 except Exception as e:
-	print("                Error ┖╴\x1b[31m"+str(e)+"\nProgram aborted. Contact developer at github repository or admin.")
+	print("                Error ┠╴\x1b[31m"+str(e)+"\nProgram aborted. Contact developer at github repository or admin.\x1b[39;49m")
+	if input("     Install? [Y/N]:  ┖╴ ") == "Y": os.system("pip3 install pymongo")
 	quit()
 print("       PyMongo Module ┠╴\x1b[32mSUCCESS\x1b[39;49m")
 try:from datetime import datetime
@@ -47,6 +58,7 @@ identitypass = getpass.getpass(prompt="  Enter Identity Code ┃ ")
 id_=id_+" [ "+b2e.Cencode(str(identitypass),id_)+" ] "
 encode = getpass.getpass(prompt="   Enter Channel Code ┃ ")
 while True:
+	os.system("clear")
 	all = db.find({})
 	deltatime = str(datetime.now().strftime("%X")).replace("0","あ").replace("1","い").replace("2","う").replace("3","え").replace("4","お").replace("5","か").replace("6","き").replace("7","く").replace("8","け").replace("9","こ")
 	date = str(datetime.now().strftime("%x")).replace("0","あ").replace("1","い").replace("2","う").replace("3","え").replace("4","お").replace("5","か").replace("6","き").replace("7","く").replace("8","け").replace("9","こ")
@@ -65,6 +77,7 @@ while True:
 		break
 	if sndmsg=="/help":
 		print("       Outputing Help ┖╴")
+		print(str(subprocess.getouput("cat README.md")))
 	if sndmsg=="/identify":
 		identify_name=input("User Name: ")
 		identify_id=input("  User ID: ")
