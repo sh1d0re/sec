@@ -3,7 +3,7 @@
 
 ## EXPLANATION
 ### Definition:
-> SEC    - B2E stands for Secure Encode Chat.
+> SEC    - SEC stands for Secure Encode Chat.
 
 ## REQUIREMENTS
 ### Packages:
