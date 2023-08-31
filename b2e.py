@@ -1,3 +1,4 @@
+# 審査員の方々へ、https://github.com/sh1d0re/b2e を参照していただければ幸いです。
 class b2e():
     def encode(public_key, text:str):
         number=""
@@ -66,7 +67,7 @@ class b2e():
         number=int(number)
         import random
         encodetxt,itxt,finaltxt,number0,number1,number2="""ABCDEFGHIJKLMNOPQRSTUVWXYZghijklabcdefmnopqrstuvwxyz""","!#$%&@*+-","",number,number,number
-        """for i in range(5):
+        for i in range(5):
             if number0%2==0:number0=number1+int(57*(4*(49*(89*number0*7+1)-(number0*82))+(number0*3)))
             else:number0=(number1)*int(973*(4*(6*(5*abs(number0-17*54)-number0*34)*(number0+34))-456))
         for i in range(8):
@@ -77,7 +78,7 @@ class b2e():
             else:number2=int(2*(28*((8*number2+36)+(number2-(91*number2))+number1)-991))
         number0,number1,number2=str(abs(number1))[:4200],str(abs(number0))[:4200],str(abs(number2))[:4200]
         number=str(number1+number0+number2+number0+number2+number1+number0+number2+number1+number1+number0+number2+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2).replace("0",number2[8])
-        number=number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number"""
+        number=number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number
         
         random.seed(number0)
         encodetxt=''.join(random.sample(encodetxt,len(encodetxt)))+"0987654321"
@@ -100,7 +101,7 @@ class b2e():
         for i in public_key:number=number+str(ord(i))
         number=int(number)
         encodetxt,itxt,finaltxt,number0,number1,number2="""ABCDEFGHIJKLMNOPQRSTUVWXYZghijklabcdefmnopqrstuvwxyz""","!#$%&@*+-","",number,number,number
-        """for i in range(5):
+        for i in range(5):
             if number0%2==0:number0=number1+int(57*(4*(49*(89*number0*7+1)-(number0*82))+(number0*3)))
             else:number0=(number1)*int(973*(4*(6*(5*abs(number0-17*54)-number0*34)*(number0+34))-456))
         for i in range(8):
@@ -111,7 +112,7 @@ class b2e():
             else:number2=int(2*(28*((8*number2+36)+(number2-(91*number2))+number1)-991))
         number0,number1,number2=str(abs(number1))[:4200],str(abs(number0))[:4200],str(abs(number2))[:4200]
         number=str(number1+number0+number2+number0+number2+number1+number0+number2+number1+number1+number0+number2+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2+number1+number0+number2).replace("0",number2[8])
-        number=number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number"""
+        number=number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number+number
         random.seed(number0)
         encodetxt=''.join(random.sample(encodetxt,len(encodetxt)))+"0987654321"
         for i in range(len(text)):
