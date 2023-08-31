@@ -78,7 +78,7 @@ while True:
 	if sndmsg=="/help":
 		print("       Outputing Help ┖╴")
 		print(str(subprocess.getouput("cat README.md")))
-	if sndmsg=="/identify":
+	if sndmsg=="/identify": #本人証明システムは開発中です。
 		identify_name=input("User Name: ")
 		identify_id=input("  User ID: ")
 		identify_idcode = getpass.getpass(prompt="  ID CODE: ")
