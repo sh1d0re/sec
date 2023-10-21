@@ -34,9 +34,12 @@ print("           B2E Module ┠╴\x1b[32mSUCCESS\x1b[39;49m")
 try:
 	from pymongo.mongo_client import MongoClient
 except Exception as e:
-	print("                Error ┠╴\x1b[31m"+str(e)+"\nProgram aborted. Contact developer at github repository or admin.\x1b[39;49m")
-	if input("     Install? [Y/N]:  ┖╴ ") == "Y": os.system("pip3 install pymongo")
-	quit()
+	print("                Error ┠╴\x1b[31m"+str(e)+"\x1b[39;49m")
+	if input("     Install? [Y/N]:  ┖╴ ") == "Y":
+		os.system("pip3 install pymongo")
+	else:
+		print("\x1b[31mProgram aborted. Contact developer at github repository or admin.\x1b[39;49m")
+		quit()
 print("       PyMongo Module ┠╴\x1b[32mSUCCESS\x1b[39;49m")
 try:from datetime import datetime
 except Exception as e:
